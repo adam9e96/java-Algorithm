@@ -10,6 +10,6 @@ fun main() {
 //    val num2: Int = readLine()!!.toInt()
 //    println(num1 * num2)
 
-    val number = readLine()!!.split(" ")
+    val number = readln().split(" ")
     println(number[0].toInt() * number[1].toInt())
 }
