@@ -11,21 +11,21 @@ public class _10807 {
     public static void main(String[] args) {
 
         // 1 <= N <= 100
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
 
         int arrays[] = new int[n];
 
 //		System.out.println(arrays.length);
 
         for (int i = 0; i < n; i++) {
-            arrays[i] = scanner.nextInt();
+            arrays[i] = sc.nextInt();
 //			 System.out.println(arrays[i]);
         }
 
 
         int count = 0;
-        int result = scanner.nextInt(); // 찾으려는 숫자
+        int result = sc.nextInt(); // 찾으려는 숫자
 
         for (int i = 0; i < arrays.length; i++) {
             if (arrays[i] == result) {
@@ -36,7 +36,7 @@ public class _10807 {
 //
         System.out.println(count);
 
-        scanner.close();
+        sc.close();
 
     }
 }
