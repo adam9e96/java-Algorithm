@@ -1,6 +1,5 @@
 package baekjoon;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /*
@@ -14,9 +13,9 @@ public class _10811 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(); // N
         int m = sc.nextInt();
+        int temp = 0;
 
         int[] arr = new int[n];
-        int temp = 0;
         for (int i = 0; i < n; i++) {
             arr[i] = (i + 1);
         }
@@ -25,10 +24,20 @@ public class _10811 {
 
         // 역순으로 m 번
         for (int i = 0; i < m; i++) {
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-//            if(a-b)
 
+            int a = sc.nextInt() - 1;
+            int b = sc.nextInt() - 1;
+//            if(a-b)
+            while (a < b) {
+                temp = arr[a];
+                arr[a] = arr[b];
+                arr[b] = temp;
+                a++;
+                b--;
+            }
+        }
+        for (int c : arr) {
+            System.out.print(c + " ");
         }
 
     }
